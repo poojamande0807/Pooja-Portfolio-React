@@ -1,12 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/pooja_profile_pic.jpg";
-import SocialMedia from "../SocialMedia";
 import TypeWriter from "./TypeWriter";
-import About from "../About/About";
-import Projects from "../Projects/Projects";
-import ResumeNew from "../Resume/ResumeNew";
-
 function Home() {
   return (
     <section>
@@ -41,33 +36,6 @@ function Home() {
 
             <Col md={5}>
               <img src={myImg} className="profile-pic" alt="avatar" />
-            </Col>
-          </Row>
-        </Container>
-      </Container>
-      <Container fluid className="home-about-section" id="about">
-        <Container>
-          <Col md={12} className="">
-            <About />
-          </Col>
-          <Col md={12} className="">
-            <Projects />
-          </Col>
-          <Col md={12} className="">
-            <ResumeNew />
-          </Col>
-          <Row>
-            <Col md={12} className="home-about-social">
-              <h1>Get in Touch</h1>
-              <p>
-                {" "}
-                Whether you want to get in touch, or talk about a project
-                collaboration.
-                <br />
-                <strong>Feel free to connect with me</strong>
-              </p>
-
-              <SocialMedia />
             </Col>
           </Row>
         </Container>

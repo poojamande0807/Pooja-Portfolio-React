@@ -1,45 +1,31 @@
-import AUTOMATION from "./Assets/Projects/3automation.jpg";
-import COAST from "./Assets/Projects/coast.jpg";
-import DROPSHIP from "./Assets/Projects/dropship.jpg";
-import GOOD_FOOD_DISCOUNTS from "./Assets/Projects/goodFoodDiscounts.png";
-import GUAMEDIA from "./Assets/Projects/guamedia.jpg";
-import HSP from "./Assets/Projects/hsp.png";
-import COSMOS from "./Assets/Projects/cosmos.jpg";
-import TECHSPEC from "./Assets/Projects/techspec.png";
-import TRAVELWELL from "./Assets/Projects/travelwell.png";
+import Swasth from "./Assets/Projects/SwasthLogo.jpg";
+import StyleVista from "./Assets/Projects/stylevista.png";
 
 export const PROJECTS = [
   {
-    image: COSMOS,
-    name: "Micorsoft Azure Cosmos DB",
-    technologyUsed: "ReactJs, Javascript, Redux, knockout.js, Jest",
+    image: Swasth,
+    name: "Swasth",
+    technologyUsed: "ReactJs, Javascript, Html,Css,ChakraUI",
     description:
-      "Azure Cosmos DB is Microsoft's proprietary globally distributed, multi-model database service 'for managing data at planet-scale' Azure Cosmos DB is a fully managed NoSQL database for modern app development. Single-digit millisecond response times, and automatic and instant scalability, guarantee speed at any scale.",
-    url: "https://cosmos.azure.com/",
+      "Swasth is a health and fitness website designed to help users monitor and improve their wellness. It features tools for tracking BMI, calorie intake, and workout routines, with real-time data visualization. Built with React, HTML, CSS, and JavaScript,Swasth provides an interactive, user-friendly experience to help users set and achieve health goals effectively.",
+    url: "leafy-klepon-dc5a44.netlify.app/",
   },
   {
-    image: TRAVELWELL,
-    name: "travlwell.com",
-    technologyUsed: "Shopify, React, typescript, polaris, GraphQL",
+    image: StyleVista,
+    name: "StyleVista.com",
+    technologyUsed: "HTML, Css, Javascript,bootstrap",
     description:
-      "Custom Luggage Tags and Passport Holders engraved with everywhere you've traveled and everywhere you will travel in the future.",
+      "StyleVista is a dynamic clothing vendor website built with Tailwind, HTML, CSS, and JavaScript. It features a sleek design for browsing trendy apparel, providing users with an engaging shopping experience through responsive layouts and easy navigation.",
     url: "https://travlwell.com/",
   },
   {
-    image: COAST,
-    name: "Coast",
-    technologyUsed: "ReactNative, Javascript, Redux",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlwo2co3oV79y8ApuYUasqOVYkVp3XPze5bg&s",
+    name: "Portfolio",
+    technologyUsed: "ReactJs, Javascript, Redux , HTML,CSS,",
     description:
-      "Team collaboration mobile app and online services like slack Message people and groups without sharing phone numbers, communicate with managers and staff all in one place. and discuss or assign tasks to get stuff done",
-    url: "https://play.google.com/store/apps/details?id=com.fomo.android.app",
-  },
-  {
-    image: AUTOMATION,
-    name: "3automation.com (RPA)",
-    technologyUsed: "ReactJs, Typescript, Redux",
-    description:
-      "The next-gen Robotic Process Automation (#RPA) platform for retail and telecom domains. The ultimate automation platform for your Shopify, Email, E- commerce shop",
-    url: "https://www.3automation.com/",
+      "Personal Portfolio showcases my skills and projects as a software developer. Featuring a modern layout, it highlights my expertise in React, JavaScript, HTML, and CSS, offering a comprehensive view of my work and professional journey.",
+    url: "https://pooja-khochare-portfolio.netlify.app/",
   },
 ];
 
@@ -60,6 +46,5 @@ export const TOOLS = [
   "Git",
   "Chrome DevTools",
   "Npm (Node Package Manager)",
-  "Heroku",
   "Postman",
 ];

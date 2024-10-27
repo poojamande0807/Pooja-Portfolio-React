@@ -1,45 +1,66 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Preloader from "./components/Preloader";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Projects from "./components/Projects/Projects";
 import "./style.css";
 import "./App.css";
-import ScrollToTop from "./components/ScrollToTop";
-import Projects from "./components/Projects/Projects";
-
+import Contact from "./components/Contact/Contact";
 function App() {
-  const [load, upadateLoad] = useState(true);
+  const [load, updateLoad] = useState(true);
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const resumeRef = useRef(null);
+  const contactRef = useRef(null); // Contact reference
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      upadateLoad(false);
+      updateLoad(false);
     }, 1200);
 
     return () => clearTimeout(timer);
   }, []);
 
+  const scrollToSection = (ref) => {
+    window.scrollTo({
+      top: ref.current.offsetTop - 60, // Offset for navbar height
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <Router>
+    <div>
       {load ? (
         <Preloader load={load} />
       ) : (
-        <div className="App" id={load ? "no-scroll" : "scroll"}>
-          <Navbar />
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/project" element={<Projects />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/resume" element={<Resume />} />
-          </Routes>
+        <div className="App">
+          <Navbar
+            scrollToSection={scrollToSection}
+            refs={{ homeRef, aboutRef, projectsRef, resumeRef, contactRef }} // Add contactRef here
+          />
+          <div ref={homeRef}>
+            <Home />
+          </div>
+          <div ref={aboutRef}>
+            <About />
+          </div>
+          <div ref={projectsRef}>
+            <Projects />
+          </div>
+          <div ref={resumeRef}>
+            <Resume />
+          </div>
+          <div ref={contactRef}>
+            <Contact />
+          </div>
           <Footer />
         </div>
       )}
-    </Router>
+    </div>
   );
 }
 

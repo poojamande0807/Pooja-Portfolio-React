@@ -331,7 +331,7 @@ html {
 
 .home-about-description {
   color: #414141 !important;
-  padding-top: 100px !important;
+  padding-top: 30px !important;
   padding-bottom: 20px !important;
   text-align: center;
 }
@@ -456,7 +456,7 @@ html {
 /* --------- */
 .project-section {
   position: relative !important;
-  padding-top: 150px !important;
+  padding-top: 50px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
 }
@@ -518,6 +518,8 @@ html {
   padding: 20px !important;
   opacity: 0.8 !important;
   border-radius: 10px !important;
+  height: 300px;
+  border-bottom: 1px solid gray;
 }
 
 .blog-img {
@@ -555,7 +557,7 @@ html {
 
 .about-section {
   position: relative !important;
-  padding-top: 100px !important;
+  padding-top: 50px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: #414141 !important;
@@ -615,8 +617,8 @@ html {
 
 .resume-section {
   position: relative !important;
-  padding-top: 110px !important;
-  padding-bottom: 30px !important;
+  /* padding-top: 110px !important; */
+  padding-bottom: 110px !important;
   background-image: var(--section-background-color) !important;
   color: #414141 !important;
 }

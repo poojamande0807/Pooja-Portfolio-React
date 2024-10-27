@@ -10,10 +10,10 @@ function Projects() {
         <h1 className="project-heading">
           My Recent <strong className="purple">Projects</strong>
         </h1>
-        <p style={{ color: "white" }}>
+        <p style={{ fontSize: "20px" }}>
           Here are a few projects I've worked on recently.
         </p>
-        <p>COMING SOON......</p>
+        {/* <p>COMING SOON......</p> */}
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           {PROJECTS.map((project, index) => (
             <Col md={4} className="project-card" key={index}>

@@ -1,0 +1,53 @@
+/* Navbar container */
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  padding: 1rem 2rem;
+  background-color: #1e293b; /* Dark navy background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.navbar .nav-buttons-container {
+  margin-left: auto; /* Pushes buttons to the right */
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar button styles */
+.nav-button {
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  color: #38bdf8; /* Light blue color on hover */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.nav-button:focus {
+  outline: none;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-end; /* Aligns buttons to the right in mobile view */
+    padding: 0.5rem 1rem;
+  }
+  .nav-button {
+    margin: 0.5rem 0;
+  }
+}
