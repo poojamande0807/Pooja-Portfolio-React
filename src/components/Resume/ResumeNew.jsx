@@ -17,26 +17,24 @@ function ResumeNew() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const handleDownload = () => {
+    // Create an anchor element and programmatically click it to download the PDF
+    const link = document.createElement("a");
+    link.href = pdf;
+    link.download = "Pooja_Resume.pdf"; // Set the desired file name
+    link.click();
+  };
+
   return (
     <div>
       <Container fluid className="resume-section">
-        {/* <Row className="resume">
-          <Document
-            file={pdf}
-            onLoadError={(error) => console.error("Error loading PDF:", error)}
-          >
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
-        </Row> */}
-
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <h1 className="project-heading">
             <strong className="purple">My Resume</strong>
           </h1>
           <Button
             variant="primary"
-            href={pdf}
-            target="_blank"
+            onClick={handleDownload} // Attach the download handler here
             className="download-button"
             style={{ width: "25%" }}
           >
